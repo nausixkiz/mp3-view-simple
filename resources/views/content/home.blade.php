@@ -22,7 +22,7 @@
                         <marquee behavior="2" direction=""> <p class="card-text" style="font-weight:40px;"></p></marquee>
 
                         <audio id="myTune{{$key}}" class="audio-player" controls controlsList="nofullscreen noremoteplayback">
-                            <source  src="{{ asset('storage/musics/' .$item->title)}}" type="audio">
+                            <source  src="{{ asset('storage/musics/' .$item->title)}}">
                         </audio>
 
                         <div class="d-flex justify-content-between align-items-center">
