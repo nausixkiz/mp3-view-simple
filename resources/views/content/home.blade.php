@@ -2,63 +2,79 @@
 
 @section('title', 'Home')
 
-@section('content')
-<!-- Kick start -->
-<div class="card">
-  <div class="card-header">
-    <h4 class="card-title">Kick start your next project 🚀</h4>
-  </div>
-  <div class="card-body">
-    <div class="card-text">
-      <p>
-        Getting start with your project custom requirements using a ready template which is quite difficult and time
-        taking process, Vuexy Admin provides useful features to kick start your project development with no efforts !
-      </p>
-      <ul>
-        <li>
-          Vuexy Admin provides you getting start pages with different layouts, use the layout as per your custom
-          requirements and just change the branding, menu &amp; content.
-        </li>
-        <li>
-          Every components in Vuexy Admin are decoupled, it means use use only components you actually need! Remove
-          unnecessary and extra code easily just by excluding the path to specific SCSS, JS file.
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-<!--/ Kick start -->
+@section('vendor-style')
+    <!-- vendor css files -->
+    <link rel="stylesheet" href="{{ asset(mix('vendors/css/extensions/plyr.min.css')) }}">
+@endsection
 
-<!-- Page layout -->
-<div class="card">
-  <div class="card-header">
-    <h4 class="card-title">What is page layout?</h4>
-  </div>
-  <div class="card-body">
-    <div class="card-text">
-      <p>
-        Starter kit includes pages with different layouts, useful for your next project to start development process
-        from scratch with no time.
-      </p>
-      <ul>
-        <li>Each layout includes required only assets only.</li>
-        <li>
-          Select your choice of layout from starter kit, customize it with optional changes like colors and branding,
-          add required dependency only.
-        </li>
-      </ul>
-      <div class="alert alert-primary" role="alert">
-        <div class="alert-body">
-          <strong>Info:</strong> Please check the &nbsp;<a
-            class="text-primary"
-            href="https://pixinvent.com/demo/vuexy-html-bootstrap-admin-template/documentation/documentation-layouts.html#layout-collapsed-menu"
-            target="_blank"
-            >Layout documentation</a
-          >&nbsp; for more layout options i.e collapsed menu, without menu, empty & blank.
-        </div>
-      </div>
+@section('page-style')
+    <!-- Page css files -->
+    <link rel="stylesheet" href="{{ asset(mix('css/base/plugins/extensions/ext-component-media-player.css')) }}">
+@endsection
+
+@section('content')
+    <div class="row">
+        @foreach ($musics as $key => $item)
+            <div class="col-md-3">
+                <div class="card mb-4 box-shadow">
+                    <div class="card-body">
+                        <marquee class="alert alert-primary" scrolldelay="200">{{$item->title}}      -----  {{$item->title}}</marquee>
+                        <marquee behavior="2" direction=""> <p class="card-text" style="font-weight:40px;"></p></marquee>
+
+                        <audio id="myTune{{$key}}" class="audio-player" controls controlsList="nofullscreen noremoteplayback">
+                            <source  src="{{ asset('storage/musics/' .$item->title)}}" type="audio">
+                        </audio>
+
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button id="playButton" onclick="document.getElementById('myTune{{$key}}').play()" class="btn btn-primary btn-sm btn-round" >
+                                    <i data-feather='play-circle'></i>
+                                </button>
+                                <button id="pauseButton" onclick="document.getElementById('myTune{{$key}}').pause()" class="btn btn-info btn-sm btn-round" >
+                                    <i data-feather='pause-circle'></i>
+                                </button>
+
+                                <button class="btn btn-secondary btn-sm btn-round " type="button" >
+                                    <i data-feather='fast-forward'></i>
+                                </button>
+
+                                <button id="stopButton"  onclick="document.getElementById('myTune{{$key}}').pause(); document.getElementById('myTune{{$key}}').currentTime = 0;" class="btn btn-sm btn-round btn-danger">
+                                    <i data-feather='stop-circle'></i>
+                                </button>
+
+                                <button onclick="document.getElementById('myTune{{$key}}').volume+=0.1" class="btn btn-warning btn-sm btn-round " type="button" >
+                                    <i data-feather='volume-2'></i>
+                                </button>
+
+                                <button onclick="document.getElementById('myTune{{$key}}').volume-=0.1" class="btn btn-warning btn-sm btn-round " type="button">
+                                    <i data-feather='volume-1'></i>
+                                </button>
+
+                                <button onclick="document.getElementById('myTune{{$key}}').muted=!document.getElementById('myTune{{$key}}').muted" type="button" class="btn btn-sm btn-round btn-info">
+                                    <i data-feather='volume-x'></i>
+                                </button>
+
+                                <a href="{{route('download', $item->id)}}" type="button" class="btn btn-sm btn-round btn-primary">
+                                    <i data-feather='arrow-down-circle'></i>Download
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endforeach
     </div>
-  </div>
-</div>
-<!--/ Page layout -->
+@endsection
+
+@section('vendor-script')
+    <!-- vendor files -->
+    <script src="{{ asset(mix('vendors/js/extensions/plyr.min.js')) }}"></script>
+    <script src="{{ asset(mix('vendors/js/extensions/plyr.polyfilled.min.js')) }}"></script>
+@endsection
+
+@section('page-script')
+    <!-- Page js files -->
+    <script src="{{ asset(mix('js/scripts/extensions/ext-component-media-player.js')) }}"></script>
+    <script src="{{asset( mix('js/contents/home.js'))}}"></script>
 @endsection

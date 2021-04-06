@@ -16,14 +16,16 @@ use App\Http\Controllers\LanguageController;
 Auth::routes(['verify' => false]);
 
 Route::group(['middleware' => 'auth'], function() {
-
-    Route::get('/', 'StaterkitController@home');
-    Route::get('home', 'StaterkitController@home')->name('home');
-
-    Route::group(['prefix' => 'acp'], function () {
-        Route::get('file-manager', 'FileManagerController@index')->name('file-manager');
+    Route::get('/', 'HomeController@index');
+    Route::get('download/{id}', 'MusicController@download')->name('download');
+    Route::get('init-data', 'InitDataController@index');
+    Route::group(['middleware' => 'role:Super Admin'], function() {
+        Route::group(['prefix' => 'acp'], function () {
+            Route::get('file-manager', 'FileManagerController@index')->name('file-manager');
+            Route::get('music/create', 'MusicController@create')->name('music.create');
+            Route::post('music', 'MusicController@store')->name('music.store');
+        });
+        // locale Route
+        Route::get('lang/{locale}', [LanguageController::class, 'swap']);
     });
-
-    // locale Route
-    Route::get('lang/{locale}', [LanguageController::class, 'swap']);
 });

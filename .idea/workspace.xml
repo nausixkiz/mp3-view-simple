@@ -1,7 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c09bc91-1524-4d39-a669-e2c2bfc253c0" name="Default Changelist" comment="" />
+    <list default="true" id="9c09bc91-1524-4d39-a669-e2c2bfc253c0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/js/contents/home.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/content/create-music.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StaterkitController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/custom.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/custom.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/data/menu-data/horizontalMenu.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/data/menu-data/horizontalMenu.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/content/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/content/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/content/layout-blank.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/content/layout-boxed.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/content/layout-collapsed-menu.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/content/layout-empty.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/content/layout-without-menu.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/contentLayoutMaster.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/contentLayoutMaster.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/panels/breadcrumb.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panels/breadcrumb.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/panels/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panels/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/panels/horizontalMenu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panels/horizontalMenu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/panels/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panels/navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +43,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="composer.json" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -192,6 +221,7 @@
       <workItem from="1617702772473" duration="27000" />
       <workItem from="1617702822731" duration="27000" />
       <workItem from="1617702866539" duration="1044000" />
+      <workItem from="1617712237989" duration="12636000" />
     </task>
     <task id="LOCAL-00001" summary="Thêm view, routes cho phần file-manager, thư viện CKFinder,hệ thống phân quyền">
       <created>1617697364244</created>
