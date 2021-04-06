@@ -13,7 +13,7 @@
 @endsection
 
 @section('content')
-    <div class="row">
+    <div class="row" id="audio-list">
         @foreach ($musics as $key => $item)
             <div class="col-md-3">
                 <div class="card mb-4 box-shadow">
@@ -21,7 +21,7 @@
                         <marquee class="alert alert-primary" scrolldelay="200">{{$item->title}}      -----  {{$item->title}}</marquee>
                         <marquee behavior="2" direction=""> <p class="card-text" style="font-weight:40px;"></p></marquee>
 
-                        <audio id="myTune{{$key}}" class="audio-player" controls controlsList="nofullscreen noremoteplayback">
+                        <audio id="my-music-{{$key}}" class="audio-player" controls controlsList="nofullscreen noremoteplayback">
                             <source  src="{{ asset('storage/musics/' .$item->title)}}">
                         </audio>
 
@@ -32,10 +32,6 @@
                                 </button>
                                 <button id="pauseButton" onclick="document.getElementById('myTune{{$key}}').pause()" class="btn btn-info btn-sm btn-round" >
                                     <i data-feather='pause-circle'></i>
-                                </button>
-
-                                <button class="btn btn-secondary btn-sm btn-round " type="button" >
-                                    <i data-feather='fast-forward'></i>
                                 </button>
 
                                 <button id="stopButton"  onclick="document.getElementById('myTune{{$key}}').pause(); document.getElementById('myTune{{$key}}').currentTime = 0;" class="btn btn-sm btn-round btn-danger">
@@ -76,5 +72,4 @@
 @section('page-script')
     <!-- Page js files -->
     <script src="{{ asset(mix('js/scripts/extensions/ext-component-media-player.js')) }}"></script>
-    <script src="{{asset( mix('js/contents/home.js'))}}"></script>
 @endsection

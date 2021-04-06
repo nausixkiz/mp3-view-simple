@@ -9,25 +9,32 @@ $(document).ready(function() {
         $(this).parents(".form-group").remove();
     });
 
-});
-
-// jQuery('iframe[src*="https://www.youtube.com/embed/"]').addClass("youtube-iframe");
-jQuery(".stop-button").click(function() {
-    // changes the iframe src to prevent playback or stop the video playback in our case
-    $('.youtube-iframe').each(function(index) {
-        $(this).attr('src', $(this).attr('src'));
-        return false;
-    });
-
-});
-$(document).ready(function() {
     $('#play-mp3').on('click', function(ev) {
 
         $("#mp3")[0].src += "&autoplay=1";
         ev.preventDefault();
 
     });
+
+    var ownVideos = $("iframe");
+
+    $.each(ownVideos, function (i, video) {
+        var frameContent = $(video).contents().find('body').html();
+        if (frameContent) {
+            $(video).contents().find('body').html(frameContent.replace("autoplay", ""));
+        }
+    });
+
 });
+
+// jQuery('iframe[src*="https://www.youtube.com/embed/"]').addClass("youtube-iframe");
+jQuery(".stop-button").click(function() {
+    $('.youtube-iframe').each(function(index) {
+        $(this).attr('src', $(this).attr('src'));
+        return false;
+    });
+});
+
 
 $("#play-mp3").one(function(){
     //as noted in addendum, check for querystring exitence
@@ -36,15 +43,6 @@ $("#play-mp3").one(function(){
     // $("#mp3")[0].src += symbol + "autoplay=1";
 });
 
-$(document).ready(function () {
-    var ownVideos = $("iframe");
-    $.each(ownVideos, function (i, video) {
-        var frameContent = $(video).contents().find('body').html();
-        if (frameContent) {
-            $(video).contents().find('body').html(frameContent.replace("autoplay", ""));
-        }
-    });
-});
 function playPrevious() {
     audioElement.pause();
 
@@ -54,7 +52,6 @@ function playPrevious() {
         currentAudioIndex = audios.length - 1;
     }
 
-    console.log(currentAudioIndex);
     audioElement.src = audios[currentAudioIndex].src;
 
     audioElement.play();
