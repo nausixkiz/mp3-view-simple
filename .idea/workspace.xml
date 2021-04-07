@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9c09bc91-1524-4d39-a669-e2c2bfc253c0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/contents/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/contents/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/scripts/extensions/ext-component-media-player.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/scripts/extensions/ext-component-media-player.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/content/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/content/home.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -200,6 +197,7 @@
       <workItem from="1617702822731" duration="27000" />
       <workItem from="1617702866539" duration="1044000" />
       <workItem from="1617712237989" duration="14607000" />
+      <workItem from="1617757727240" duration="624000" />
     </task>
     <task id="LOCAL-00001" summary="Thêm view, routes cho phần file-manager, thư viện CKFinder,hệ thống phân quyền">
       <created>1617697364244</created>

@@ -5,11 +5,13 @@
 @section('vendor-style')
     <!-- vendor css files -->
     <link rel="stylesheet" href="{{ asset(mix('vendors/css/extensions/plyr.min.css')) }}">
+    <link rel="stylesheet" href="{{ asset(mix('vendors/css/extensions/jquery.rateyo.min.css'))}}">
 @endsection
 
 @section('page-style')
     <!-- Page css files -->
     <link rel="stylesheet" href="{{ asset(mix('css/base/plugins/extensions/ext-component-media-player.css')) }}">
+    <link rel="stylesheet" href="{{ asset(mix('css/base/plugins/extensions/ext-component-ratings.css')) }}">
 @endsection
 
 @section('content')
@@ -18,6 +20,14 @@
             <div class="col-md-3">
                 <div class="card mb-4 box-shadow">
                     <div class="card-body">
+                        <div class="col-md d-flex flex-column align-items-start">
+                            <p class="card-text font-weight-semibold mb-25">onChange Event</p>
+                            <div class="onChange-event-ratings"></div>
+                            <div class="counter-wrapper mt-1">
+                                <strong>Ratings:</strong>
+                                <span class="counter"></span>
+                            </div>
+                        </div>
                         <marquee class="alert alert-primary" scrolldelay="200">{{$item->title}}      -----  {{$item->title}}</marquee>
                         <marquee behavior="2" direction=""> <p class="card-text" style="font-weight:40px;"></p></marquee>
 
@@ -67,6 +77,7 @@
     <!-- vendor files -->
     <script src="{{ asset(mix('vendors/js/extensions/plyr.min.js')) }}"></script>
     <script src="{{ asset(mix('vendors/js/extensions/plyr.polyfilled.min.js')) }}"></script>
+    <script src="{{ asset(mix('vendors/js/extensions/jquery.rateyo.min.js')) }}"></script>
 @endsection
 
 @section('page-script')
