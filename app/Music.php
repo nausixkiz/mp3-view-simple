@@ -14,4 +14,9 @@ class Music extends Model
     protected $fillable = [
         'title', 'name', 'size', 'extension'
     ];
+
+    public function ratings(){
+
+        return $this->hasMany(Rating::class, 'music_id');
+    }
 }

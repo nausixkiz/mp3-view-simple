@@ -18,6 +18,7 @@ Auth::routes(['verify' => false]);
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/', 'HomeController@index');
     Route::get('download/{id}', 'MusicController@download')->name('download');
+    Route::post('rating/{id}', 'MusicController@rating')->name('rating');
     Route::get('init-data', 'InitDataController@index');
     Route::group(['middleware' => 'role:Super Admin'], function() {
         Route::group(['prefix' => 'acp'], function () {

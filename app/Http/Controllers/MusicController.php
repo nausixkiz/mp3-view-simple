@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreMusicRequest;
 use App\Music;
+use App\Rating;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class MusicController extends Controller
@@ -36,6 +38,8 @@ class MusicController extends Controller
 
         }
 
+        toastr()->success('Create new music successfully. ');
+
         return redirect()->back();
     }
 
@@ -48,6 +52,21 @@ class MusicController extends Controller
         if(!file_exists($pathToFile)) {
             return back();
         }
+
         return response()->download($pathToFile);
+    }
+
+    public function rating($id, Request $request)
+    {
+        $user = Auth::user();
+        $music = Music::findOrFail($id);
+
+        Rating::create([
+            'rating' => $request->rating,
+            'user_id' =>  $user->id,
+            'music_id' =>  $music->id,
+        ]);
+
+        return response()->json('OK');
     }
 }
