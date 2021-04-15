@@ -19,6 +19,10 @@ class InitDataController extends Controller
 
             $user->assignRole('Super Admin');
 
+            return response()->json("Khởi tạo dữ liệu đầu vào thành công!");
+
         }
+
+        return response()->json("Khởi tạo dữ liệu đầu vào thất bại!");
     }
 }

@@ -20,8 +20,7 @@
             <div class="col-md-3">
                 <div class="card mb-4 box-shadow">
                     <div class="card-body">
-                        <div class="col-md d-flex flex-column align-items-start">
-                            <p class="card-text font-weight-semibold mb-25">onChange Event</p>
+                        <div class="col-md d-flex flex-column align-items-start m-10">
                             <div class="onChange-event-ratings"></div>
                             <div class="counter-wrapper mt-1">
                                 <strong>Ratings:</strong>
@@ -83,4 +82,5 @@
 @section('page-script')
     <!-- Page js files -->
     <script src="{{ asset(mix('js/scripts/extensions/ext-component-media-player.js')) }}"></script>
+    <script src="{{ asset(mix('js/scripts/extensions/ext-component-ratings.js')) }}"></script>
 @endsection
