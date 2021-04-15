@@ -15,6 +15,7 @@ use App\Http\Controllers\LanguageController;
 // Auth::routes();
 Auth::routes(['verify' => false]);
 
+
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/', 'HomeController@index');
     Route::get('download/{id}', 'MusicController@download')->name('download');
@@ -25,6 +26,7 @@ Route::group(['middleware' => 'auth'], function() {
             Route::get('file-manager', 'FileManagerController@index')->name('file-manager');
             Route::get('music/create', 'MusicController@create')->name('music.create');
             Route::post('music', 'MusicController@store')->name('music.store');
+            Route::get('rating', 'RatingController@index')->name('rating.index');
         });
         // locale Route
         Route::get('lang/{locale}', [LanguageController::class, 'swap']);

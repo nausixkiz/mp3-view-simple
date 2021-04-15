@@ -56,6 +56,7 @@ $(function () {
                     },
                     success:function(response){
                         alert("Cám ơn bạn đã đánh giá!");
+                        location.reload();
                     },
                 });
             });

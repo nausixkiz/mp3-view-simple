@@ -11,6 +11,12 @@
       "name": "Create Music",
       "icon": "music",
       "slug": "create-music"
+    },
+    {
+      "url": "/acp/rating",
+      "name": "View All Ratings",
+      "icon": "star",
+      "slug": "view-rating"
     }
   ]
 }
