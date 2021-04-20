@@ -17,6 +17,7 @@ Auth::routes(['verify' => false]);
 
 
 Route::group(['middleware' => 'auth'], function() {
+    Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
     Route::get('/', 'HomeController@index');
     Route::get('download/{id}', 'MusicController@download')->name('download');
     Route::post('rating/{id}', 'MusicController@rating')->name('rating');

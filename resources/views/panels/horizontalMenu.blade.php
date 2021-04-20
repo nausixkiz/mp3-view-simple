@@ -59,12 +59,26 @@ $configData = Helper::applClasses();
             <span>{{ __('locale.'.$menu->name) }}</span>
           </a>
           @if(isset($menu->submenu))
-          @include('panels/horizontalSubmenu', ['menu' => $menu->submenu])
+            @include('panels/horizontalSubmenu', ['menu' => $menu->submenu])
           @endif
         </li>
         @endforeach
         @endif
         {{-- Foreach menu item ends --}}
+        @role('Super Admin')
+        <li class="nav-item">
+          <a href="http://127.0.0.1:8000/acp/music/create" class="nav-link d-flex align-items-center " target="_self"  >
+            <i data-feather="music"></i>
+            <span>Create Music</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="{{asset('/acp/rating')}}" class="nav-link d-flex align-items-center " target="_self"  >
+            <i data-feather="star"></i>
+            <span>View All Ratings</span>
+          </a>
+        </li>
+        @endrole
       </ul>
     </div>
   </div>

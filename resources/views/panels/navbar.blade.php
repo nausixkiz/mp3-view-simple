@@ -81,7 +81,7 @@
             </span>
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-user">
-            <a class="dropdown-item" href="javascript:void(0)">
+            <a class="dropdown-item" href="{{asset('/logout')}}">
               <i class="mr-50" data-feather="power"></i> Logout
             </a>
           </div>

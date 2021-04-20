@@ -5,18 +5,6 @@
       "name": "Home",
       "icon": "home",
       "slug": "home"
-    },
-    {
-      "url": "/acp/music/create",
-      "name": "Create Music",
-      "icon": "music",
-      "slug": "create-music"
-    },
-    {
-      "url": "/acp/rating",
-      "name": "View All Ratings",
-      "icon": "star",
-      "slug": "view-rating"
     }
   ]
 }
